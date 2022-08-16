@@ -20,6 +20,7 @@ function App() {
   const [totalPages, setTotalPages] = useState(1)
 
   useEffect(() => {
+    // debounce mechanism ↓
     let timer = null
     if (value) {
       timer = setTimeout(() => {
@@ -32,7 +33,8 @@ function App() {
             setList(list)
           }
         }).finally(() => setSearching(false))
-      }, 500)
+        // to adjust debounce wait time ↓
+      }, 350)
       return () => timer && clearTimeout(timer)
     } else {
       setSearching(false)
@@ -41,6 +43,7 @@ function App() {
 
   const handleInputChange = useCallback((e) => {
     setValue(e.target.value)
+    // ↓ to cancel out debounce wait time
     setSearching(true)
     setPage(1)
     setTotalPages(1)
@@ -86,6 +89,7 @@ function App() {
                 document.body.scrollTop = 0
               } else {
                 setPage((prev) => prev + 1)
+                // ↓ to cancel out debounce wait time
                 setSearching(true)
               }
             }}
