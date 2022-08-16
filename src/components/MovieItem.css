@@ -4,6 +4,7 @@
 }
 
 .movie-item .poster {
+  text-align: center;
   background-color: silver;
   height: 100%;
   display: flex;

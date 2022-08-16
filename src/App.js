@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import './App.css'
 import MovieItem from './components/MovieItem'
 import tmdb from './assets/tmdb.svg'
+import puff from './assets/puff.svg'
 
 function getMovies(value, page, cb) {
   const url = `https://api.themoviedb.org/3/search/movie?api_key=a99cc60fc2b34dbb18cb806b8a88ed14&query=${value}&page=${page}`
@@ -64,7 +65,10 @@ function App() {
       </div>
 
       <div className='movie-list'>
-        {page === 1 && searching && <h3>Searching...</h3>}
+        {/* {page === 1 && searching && <h3>Searching...</h3>} */}
+        {page === 1 && searching && (
+          <img width={150} height={150} src={puff} alt='searching' />
+        )}
         {value && !searching && !list?.length && (
           <h3>Oops! No movie found...</h3>
         )}
@@ -87,10 +91,10 @@ function App() {
             }}
           >
             {searching
-              ? 'Searching...'
+              ? 'Loading ...'
               : totalPages === page
               ? 'Go back to top'
-              : 'More...'}
+              : 'More'}
           </button>
         )}
       </div>
