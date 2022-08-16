@@ -1,0 +1,24 @@
+.App {
+  padding: 40px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+
+.ctn-user-input {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.ctn-user-input > input {
+  padding: 10px;
+  width: 70%;
+  min-width: 400px;
+  border: 1px grey solid;
+  border-radius: 10px;
+}
+
+.ctn-movie-list {
+  flex: 1;
+}
