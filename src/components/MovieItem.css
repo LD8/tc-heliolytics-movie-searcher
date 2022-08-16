@@ -1,0 +1,23 @@
+.movie-item {
+  width: 200px;
+  height: 300px;
+}
+
+.movie-item .poster {
+  background-color: silver;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.movie-item .poster > span {
+  display: block;
+  padding: 20px;
+  font-size: 14px;
+}
+.movie-item .poster > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
