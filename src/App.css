@@ -26,9 +26,6 @@
   gap: 12px;
   width: 60vw;
 }
-.tmdb > img {
-  height: 30px;
-}
 
 .searcher .searcher-content .user-input {
   height: 40px;

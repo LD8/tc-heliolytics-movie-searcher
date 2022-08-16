@@ -51,8 +51,8 @@ function App() {
     <div className='App'>
       <div className={`searcher ${value ? '' : 'flex1'}`}>
         <div className='searcher-content'>
-          <div className='tmdb'>
-            <img src={tmdb} alt='TMDB' />
+          <div>
+            <img height={30} src={tmdb} alt='TMDB' />
           </div>
           <div className='user-input'>
             <input
