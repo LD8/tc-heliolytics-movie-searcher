@@ -4,7 +4,7 @@ import MovieItem from './MovieItem'
 const MovieList = ({ data, searching }) => {
   if (searching) return <h3>Searching...</h3>
   if (!data) return null
-  if (data.page && !data.total_results) return <h2>No movies found</h2>
+  if (data.page && !data.total_results) return <h3>Oops! No movies found</h3>
 
   return (
     <>
